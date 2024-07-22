@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encriptador de texto</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  </head>
+  <body>
+    <header class="cabecera">
+      <img class="cabecera__logo" src="./assets/Logo.png" alt="Logo de alura" />
+    </header>
+    <main class="contenido">
+      <div class="contenido__encriptar">
+        <textarea
+          class="contenido__encriptar__texto"
+          placeholder="Ingrese el texto aqui"
+          name="textarea"
+          id="texto-encriptar"
+        ></textarea>
+        <div class="contenido__encriptar__aviso">
+          <img
+            class="contenido__encriptar__aviso__imagen--exclamacion"
+            src="./assets/logo-exclamacion.png"
+            alt="Logo de exclamacion"
+          />
+          <p class="contenido__encriptar__aviso__texto">
+            Solo letras minúsculas y sin acentos
+          </p>
+        </div>
+        <div class="contenido__encriptar__botones">
+          <button
+            onclick="encriptarTexto();"
+            class="contenido__encriptar__botones--encriptar"
+          >
+            Encriptar
+          </button>
+          <button
+            onclick="desencriptarTexto();"
+            class="contenido__encriptar__botones--desencriptar"
+          >
+            Desencriptar
+          </button>
+        </div>
+      </div>
+      <div class="contenido__desencriptar">
+        <div class="contenido__desencriptar--resultado">
+          <textarea
+            class="contenido__desencriptar__texto"
+            name="textarea desencriptar"
+            id="texto-desencriptar"
+          ></textarea>
+          <button
+            onclick="copiarTexto();"
+            class="contenido__desencriptar__boton--copiar"
+          >
+            Copiar
+          </button>
+        </div>
+        <img
+          class="contenido__desencriptar__imagen"
+          src="./assets/Muñeco.png"
+          alt="Hombre buscando con una lupa"
+        />
+        <h1 class="contenido__desencriptar__mensaje">
+          Ningún mensaje fue encontrado
+        </h1>
+        <p class="contenido__desencriptar__mensaje--parrafo">
+          Ingresa el texto que desees encriptar
+          <span class="contenido__desencriptar__mensaje--span"
+            >o desencriptar</span
+          >
+        </p>
+      </div>
+    </main>
+    <footer class="pie-pagina">
+      <p class="pie-pagina__texto">Jhosban Barajas - 2024</p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
